@@ -4,10 +4,15 @@ n = random.randint(1, 100)
 print("Jag tänker på ett tal mellan 1-100. Gissa vilket?")
 gissning = 0
 
+def ask_number():
+    text = input("Din gissning: ")
+    as_number = int(text)
+    return as_number
+
+
 def mainloop(gissning):
     while True:
-        text = input("Din gissning: ")
-        as_number = int(text)
+        as_number = ask_number()
 
         if as_number == n:
             gissning += 1
@@ -25,4 +30,6 @@ def mainloop(gissning):
             gissning += 1
             print("Antal gissningar: " + str(gissning))
 
+
 mainloop(gissning)
+

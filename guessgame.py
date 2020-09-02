@@ -24,13 +24,13 @@ def mainloop(gissning):
         if as_number < n:
             print("Fel! Mitt nummer är högre... Testa igen!")
             gissning += 1
-            print("Antal gissningar: " + str(gissning))
+            print(f"Antal gissningar: {gissning}")
 
         if as_number > n:
             print("Fel! Mitt nummer är lägre... Testa igen!")
             gissning += 1
-            print("Antal gissningar: " + str(gissning))
+            print(f"Antal gissningar: {gissning}")
 
 
 antal_gissningar = mainloop(gissning)
-print("Du hade totalt: " + str(antal_gissningar) + " " "gissningar")
+print(f"Du hade totalt: {antal_gissningar} gissningar")

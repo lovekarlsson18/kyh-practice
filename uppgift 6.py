@@ -1,14 +1,5 @@
 import calc
-
-
-def multiply(a, b):
-    result = a * b
-    return result
-
-
-def divide(a, b):
-    result = a / b
-    return result
+from calc import multiply, divide
 
 
 def run():
@@ -27,10 +18,10 @@ def run():
         result = calc.subtract(a, b)
 
     if answer == "3":
-        result = multiply(a, b)
+        result = calc.multiply(a, b)
 
     if answer == "4":
-        result = divide(a, b)
+        result = calc.divide(a, b)
 
     print("Result = " + str(result))
 

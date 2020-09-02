@@ -1,5 +1,4 @@
 import calc
-from calc import multiply, divide
 
 
 def run():

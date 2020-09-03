@@ -1,8 +1,8 @@
 def main():
     sum = 0
-    for i in range(7, 1000):
+    for i in range(7, 1001):
         sum += i
-        print(sum)
+    print(sum)
 
 
 if __name__ == '__main__':

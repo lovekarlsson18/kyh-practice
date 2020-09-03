@@ -1,5 +1,5 @@
 def main():
-    for i in range(1, 51, 2):
+    for i in reversed(range(1, 11,)):
         print(i)
 
 

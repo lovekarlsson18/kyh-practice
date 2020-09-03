@@ -1,7 +1,7 @@
 def main():
-    sum = 0
-    for i in range(7, 1001):
-        sum += i
+    sum = 1
+    for i in range(1, 1001):
+        sum *= i
     print(sum)
 
 

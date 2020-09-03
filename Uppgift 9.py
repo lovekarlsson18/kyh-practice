@@ -1,15 +1,22 @@
 import random
 
 
-def game():
-    correct_answers = 0
-    i = int(input("Hur många uppgifter vill du lösa?"))
-    for i in range(i):
-        a = random.randint(1, 10)
-        b = random.randint(1, 10)
-        answer = input(f"{a}+{b}")
-        number = int(answer)
 
+
+def game(antal, max_tal):
+    correct_answers = 0
+
+    for i in range(antal):
+        a = random.randint(1, max_tal)
+        b = random.randint(1, max_tal)
+
+        while True:
+            answer = input(f"{a}+{b}")
+            try:
+                number = int(answer)
+                break
+            except ValueError:
+                print("Det måste vara en siffra, försök igen")
         if number == a + b:
             print("Rätt!")
             correct_answers += 1
@@ -18,8 +25,15 @@ def game():
             print(f"Fel... Det blir {a+b}")
             print("---")
 
-    print(f"Du fick {correct_answers} av {i} rätt.")
+    print(f"Du fick {correct_answers} av {antal} rätt.")
 
 
 if __name__ == '__main__':
-    game()
+    try:
+        antal = int(input("Hur många uppgifter vill du lösa?"))
+        max_tal = int(input("Hur stort ska det största talet vara?"))
+    except ValueError:
+        print("Du skrev en bokstav. Då blir det 3 ")
+        antal = 3
+        max_tal = 10
+    game(antal, max_tal)

@@ -7,7 +7,7 @@ def main():
     students = input("Skriv studenternas namn med komma imellan: ").split(",")
     for name in students:
         if is_it_too_long(name):
-            print(f"{name} är för långt!")
+            print(f"{name.title()} är för långt!")
 
 
 if __name__ == '__main__':

@@ -11,21 +11,20 @@ homepage = """
 
 print(homepage)
 
-todo_list = []
-todo_list.append(p.read_text())
+
+todo_list = p.read_text(encoding='utf8').splitlines()
 
 
 def user_input():
     user_answer = input("Vad vill du göra? ")
     while True:
         if user_answer == "1":
-            print(p.read_text())
+            print(todo_list)
 
         if user_answer == "2":
             p.read_text()
             user_input2 = input("Vad vill du lägga till? ")
             todo_list.append(user_input2)
-            p.write_text(f"{todo_list}")
 
         if user_answer == "3":
             print(p.read_text())
@@ -34,8 +33,8 @@ def user_input():
             p.write_text(f"{todo_list}")
 
         if user_answer == "4":
+            p.write_text(f"{todo_list}")
             quit()
-
 
         user_input()
 
